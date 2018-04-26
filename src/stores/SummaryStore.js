@@ -15,3 +15,11 @@ const SummaryStore = Object.assign({}, EventEmitter.prototype,{
     return computeSummary(CounterStore.getCounterValues())
   }
 })
+
+SummaryStore.dispatchToken = AppDispatcher.register((action) => {
+  if((action.type === ActionTypes.INCREMENT) || 
+     (action.type === ActionTypes.DECREMENT)) {
+    AppDispatcher.waitFor([CounterStore.dispatchToken]);
+    SummaryStore.emitChange()
+  }
+})
