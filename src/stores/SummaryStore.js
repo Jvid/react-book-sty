@@ -1,4 +1,7 @@
-// import { EventEmitter } from "events";
+import { EventEmitter } from "events";
+import CounterStore from './CounterStore'
+import AppDispatcher from '../ControlPanelFlux/AppDispatcher.js'
+import ActionTypes from '../ControlPanelFlux/ActionTypes'
 
 function computeSummary(counterValues) {
   let summary = 0
@@ -23,3 +26,5 @@ SummaryStore.dispatchToken = AppDispatcher.register((action) => {
     SummaryStore.emitChange()
   }
 })
+
+export default SummaryStore

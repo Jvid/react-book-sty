@@ -14,3 +14,10 @@ export const decrement = (counterCaption) => {
     counterCaption: counterCaption
   })
 }
+
+const Actions = {
+  increment: increment,
+  decrement: decrement
+}
+
+export default Actions

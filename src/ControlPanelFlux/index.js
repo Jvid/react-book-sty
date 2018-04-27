@@ -1,6 +1,6 @@
 import React,{ Component } from 'react'
 import Counter from './Counter'
-
+import Summary from './Summary';
 class ControlPanel extends Component {
   constructor(props){
     super(props)
@@ -17,12 +17,11 @@ class ControlPanel extends Component {
   render () {
     return (
       <div>
-        <Counter initValue={this.initValues[0]} onUpdate={this.updateCount}/>
-        <Counter initValue={this.initValues[1]} onUpdate={this.updateCount}/>
-        <Counter initValue={this.initValues[2]} onUpdate={this.updateCount}/>
-        <div>
-          Total Counts: {this.state.sum}
-        </div>
+        <Counter caption="First" />
+        <Counter caption="Second" />
+        <Counter caption="Third" />
+        <hr/>
+        <Summary />
       </div>
     )
   }
