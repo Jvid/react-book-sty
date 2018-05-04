@@ -1,9 +1,8 @@
-import React,{Component} from 'react';
 import Counter from './Counter.js';
 import * as Actions from '../Action.js';
 import {connect} from 'react-redux';
 
-fucntion mapStateToProps(state, ownProps) {
+function mapStateToProps(state, ownProps) {
   return {
     value: state[ownProps.caption]
   }
