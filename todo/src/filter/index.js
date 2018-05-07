@@ -1,5 +1,5 @@
 import * as actions from './actions.js'
 import reducer from './reducer.js'
-import view from './views/container.js'
+import view from './views/filter.js'
 
-export { actions, reduce, view }
+export { actions, reducer, view }

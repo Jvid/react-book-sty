@@ -9,4 +9,3 @@ ReactDOM.render(
     <TodoApp />
   </Provider> 
   , document.getElementById('root'));
-registerServiceWorker();
